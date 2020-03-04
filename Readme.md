@@ -13,7 +13,10 @@ git clone https://github.com/JonnyKreng/LifeWallpaperBattery/
 cd LifeWallpaperBattery
 pip install -r requirements.txt
 sudo chmod +x Batterybackground.py
-./Batterybackground.py
 ```
 
-Edit the config.py, set the images and change the parameters to your likeing.
+Edit the config.py, set the images and change the parameters to your likeing. Now you can start the script:
+
+```bash
+./Batterybackground.py
+```
