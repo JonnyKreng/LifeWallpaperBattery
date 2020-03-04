@@ -90,7 +90,17 @@ def set_wallpaper(path):
 def main():
     back = background_image(config.background)
     batt = battery_image(config.battery)
-    while(True):              
+    flag = True
+    while(True):
+        if(flag):
+            split = config.outputpath.split('.')
+            config.outputpath = split[0] + 'a.' + split[1]
+            flag = False
+        else:
+            split = config.outputpath.split('.')
+            config.outputpath = split[0] + 'b.' + split[1]
+            flag = True
+
         image = combine_images(back, process_battery(batt, batttery_level()))
         image.save(config.outputpath)
         set_wallpaper(config.outputpath)
