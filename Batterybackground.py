@@ -94,16 +94,16 @@ def main():
     while(True):
         if(flag):
             split = config.outputpath.split('.')
-            config.outputpath = split[0] + 'a.' + split[1]
+            outputpath = split[0] + 'a.' + split[1]
             flag = False
         else:
             split = config.outputpath.split('.')
-            config.outputpath = split[0] + 'b.' + split[1]
+            outputpath = split[0] + 'b.' + split[1]
             flag = True
 
         image = combine_images(back, process_battery(batt, batttery_level()))
-        image.save(config.outputpath)
-        set_wallpaper(config.outputpath)
+        image.save(outputpath)
+        set_wallpaper(outputpath)
         time.sleep(config.frametime)
 
 main()
