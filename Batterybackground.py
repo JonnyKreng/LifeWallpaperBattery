@@ -100,6 +100,7 @@ def main():
             split = config.outputpath.split('.')
             outputpath = split[0] + 'b.' + split[1]
             flag = True
+        print(outputpath)
 
         image = combine_images(back, process_battery(batt, batttery_level()))
         image.save(outputpath)
